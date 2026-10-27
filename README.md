@@ -1,6 +1,8 @@
-# Epiphany Padfield
+# Padfield
 
 Static site. No account, no monthly platform fee. Open `index.html` or serve the folder.
+
+The public pages do not name a person and do not show a registration number. The offer is personnel supplied for a service, plus plant on dry hire.
 
 Phone and email are not on the public pages. After a valid enquiry form, the page shows the placeholders in `main.js`: `REVEAL_PHONE_DISPLAY`, `REVEAL_PHONE_TEL` and `REVEAL_EMAIL`. Swap those three when the real number and mailbox should be public. The form does not send email anywhere yet.
 
