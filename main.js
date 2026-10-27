@@ -50,20 +50,29 @@ if (navToggle && header && siteNav) {
 }
 
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-const wide = window.matchMedia("(min-width: 961px)").matches;
 
 const heroMedia = document.querySelector(".hero-media");
-if (heroMedia && !reduceMotion && wide) {
+const heroWide = window.matchMedia("(min-width: 961px)");
+if (heroMedia && !reduceMotion) {
   let ticking = false;
+  const paintHero = function () {
+    if (!heroWide.matches) {
+      heroMedia.style.transform = "";
+      return;
+    }
+    const y = Math.min(window.scrollY, 720);
+    heroMedia.style.transform = "translate3d(0," + (y * 0.28) + "px,0) scale(1.08)";
+  };
   window.addEventListener("scroll", function () {
     if (ticking) return;
     ticking = true;
     requestAnimationFrame(function () {
-      const y = Math.min(window.scrollY, 280);
-      heroMedia.style.transform = "translate3d(0," + (y * 0.08) + "px,0) scale(1.06)";
+      paintHero();
       ticking = false;
     });
   }, { passive: true });
+  heroWide.addEventListener("change", paintHero);
+  paintHero();
 }
 
 if (!reduceMotion && "IntersectionObserver" in window) {

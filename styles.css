@@ -208,8 +208,12 @@ p { margin: 0; }
 }
 .hero-media {
   position: absolute;
-  inset: 0;
-  transform: scale(1.06);
+  left: 0;
+  width: 100%;
+  top: -28%;
+  height: 148%;
+  transform: scale(1.08);
+  will-change: transform;
 }
 .hero-media img,
 .hero-media video {
@@ -224,8 +228,8 @@ p { margin: 0; }
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(180deg, rgba(18, 21, 24, 0.18) 0%, rgba(18, 21, 24, 0.12) 40%, rgba(18, 21, 24, 0.78) 100%),
-    linear-gradient(90deg, rgba(18, 21, 24, 0.72) 0%, rgba(18, 21, 24, 0.25) 52%, rgba(18, 21, 24, 0.05) 100%);
+    linear-gradient(180deg, rgba(18, 21, 24, 0.38) 0%, rgba(18, 21, 24, 0.34) 46%, rgba(18, 21, 24, 0.86) 100%),
+    linear-gradient(90deg, rgba(18, 21, 24, 0.82) 0%, rgba(18, 21, 24, 0.58) 46%, rgba(18, 21, 24, 0.22) 100%);
 }
 .hero-copy { position: relative; z-index: 1; padding-bottom: 4.75rem; }
 .hero-copy-inner { max-width: 40rem; }
@@ -666,7 +670,7 @@ input:user-invalid, select:user-invalid, textarea:user-invalid { border-color: v
 
 @media (max-width: 760px) {
   .hero { height: auto; min-height: 0; display: block; color: var(--ink); overflow: visible; }
-  .hero-media { position: relative; height: min(52vw, 280px); transform: none; }
+  .hero-media { position: relative; top: 0; height: min(52vw, 280px); transform: none; will-change: auto; }
   .hero-shade { background: linear-gradient(180deg, rgba(18, 21, 24, 0) 45%, rgba(18, 21, 24, 0.45) 100%); }
   .hero-copy { padding: 1.35rem 0 0; }
   .hero h1, .hero-role { color: var(--ink); }
