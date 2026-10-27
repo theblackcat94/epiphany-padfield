@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Enquire · Epiphany Padfield · RPEQ</title>
-  <meta name="description" content="Send a message to Epiphany Padfield, RPEQ 38942. Phone 0426 281 117.">
+  <meta name="description" content="Send an enquiry to Epiphany Padfield, RPEQ 38942. Phone and email are shown after the form is sent.">
   <meta name="theme-color" content="#1A1E21">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -47,9 +47,7 @@
       <div class="enquire-intro">
         <p class="eyebrow">Enquire</p>
         <h1>Send a message.</h1>
-        <p class="lede">Say which service you need and the package. If it is a fit, you get a direct reply.</p>
-        <p><a class="contact-line" href="tel:+61426281117">0426 281 117</a></p>
-        <p><a class="contact-line" id="emailLink" href="mailto:padfieldepiphany@gmail.com">padfieldepiphany@gmail.com</a></p>
+        <p class="lede">Say which service you need and the package. Send the form and the phone number and email are shown on this page.</p>
         <p class="lede">Queensland. Site work through the state, and New South Wales where the package is.</p>
         <figure class="frame">
           <img src="assets/grader.jpg" alt="Motor grader trimming a formation" width="1800" height="1200">
@@ -92,6 +90,11 @@
           </label>
           <button class="btn" type="submit">Send message</button>
           <p class="form-status" id="formStatus" role="status"></p>
+          <div id="contactReveal" class="contact-reveal" hidden>
+            <p>Phone and email</p>
+            <a class="contact-line" id="revealPhone"></a>
+            <a class="contact-line" id="revealEmail"></a>
+          </div>
         </form>
       </div>
     </div>
@@ -100,12 +103,11 @@
   <footer class="foot">
     <div class="shell foot-cta">
       <div>
-        <p class="eyebrow">Direct</p>
-        <h2>Prefer the phone? Call it.</h2>
+        <p class="eyebrow">Enquire</p>
+        <h2>The form is how you get the number.</h2>
       </div>
       <div class="foot-cta-actions">
-        <a class="btn" href="tel:+61426281117">0426 281 117</a>
-        <a class="btn btn-ghost" href="mailto:padfieldepiphany@gmail.com">Email</a>
+        <a class="btn" href="#enquiry">Send a message</a>
       </div>
     </div>
     <div class="shell foot-grid">
@@ -121,8 +123,8 @@
         <a href="enquire.html">Enquire</a>
       </nav>
       <div class="foot-contact">
-        <a href="tel:+61426281117">0426 281 117</a>
-        <a href="mailto:padfieldepiphany@gmail.com">padfieldepiphany@gmail.com</a>
+        <a href="#enquiry">Send an enquiry</a>
+        <p class="fine">Phone and email come back after the form is sent.</p>
         <p class="fine">Queensland · New South Wales</p>
       </div>
     </div>

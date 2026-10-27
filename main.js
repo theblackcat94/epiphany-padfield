@@ -1,4 +1,6 @@
-const ENQUIRY_EMAIL = "padfieldepiphany@gmail.com";
+const REVEAL_PHONE_DISPLAY = "0400 000 000";
+const REVEAL_PHONE_TEL = "+61400000000";
+const REVEAL_EMAIL = "enquiries@padfield.example";
 
 const toggle = document.getElementById("themeToggle");
 
@@ -50,12 +52,6 @@ if (navToggle && header && siteNav) {
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 const wide = window.matchMedia("(min-width: 961px)").matches;
 
-const video = document.getElementById("heroVideo");
-if (video && !reduceMotion && wide) {
-  video.src = "assets/hero.mp4";
-  video.play().catch(function () {});
-}
-
 const heroMedia = document.querySelector(".hero-media");
 if (heroMedia && !reduceMotion && wide) {
   let ticking = false;
@@ -83,12 +79,6 @@ if (!reduceMotion && "IntersectionObserver" in window) {
   document.querySelectorAll(".reveal").forEach(function (el) { el.classList.add("is-in"); });
 }
 
-const emailLink = document.getElementById("emailLink");
-if (emailLink) {
-  emailLink.textContent = ENQUIRY_EMAIL;
-  emailLink.href = "mailto:" + ENQUIRY_EMAIL;
-}
-
 const form = document.getElementById("enquiry");
 const status = document.getElementById("formStatus");
 
@@ -104,21 +94,18 @@ if (form && status) {
       return;
     }
 
-    const data = new FormData(form);
-    const lines = [
-      "Name: " + data.get("name"),
-      "Organisation: " + (data.get("organisation") || "—"),
-      "Email: " + data.get("email"),
-      "Phone: " + (data.get("phone") || "—"),
-      "Service: " + data.get("service"),
-      "",
-      data.get("message")
-    ];
-    const href = "mailto:" + ENQUIRY_EMAIL
-      + "?subject=" + encodeURIComponent("Enquiry — " + data.get("service"))
-      + "&body=" + encodeURIComponent(lines.join("\n"));
-
-    status.textContent = "Your email app should open with this message addressed to " + ENQUIRY_EMAIL + ". If nothing opens, email that address direct.";
-    window.location.href = href;
+    const reveal = document.getElementById("contactReveal");
+    const phone = document.getElementById("revealPhone");
+    const email = document.getElementById("revealEmail");
+    if (phone) {
+      phone.textContent = REVEAL_PHONE_DISPLAY;
+      phone.href = "tel:" + REVEAL_PHONE_TEL;
+    }
+    if (email) {
+      email.textContent = REVEAL_EMAIL;
+      email.href = "mailto:" + REVEAL_EMAIL;
+    }
+    if (reveal) reveal.hidden = false;
+    status.textContent = "The phone number and email are below.";
   });
 }
