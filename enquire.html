@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Enquire · Epiphany Padfield · RPEQ</title>
+  <meta name="description" content="Send a message to Epiphany Padfield, RPEQ 38942. Phone 0426 281 117.">
+  <meta name="theme-color" content="#1A1E21">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500..650&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    try {
+      var saved = localStorage.getItem("padfield-theme");
+      var theme = saved || (matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+      document.documentElement.setAttribute("data-theme", theme);
+      document.documentElement.classList.add("js");
+      var meta = document.querySelector('meta[name="theme-color"]');
+      if (meta) meta.setAttribute("content", theme === "light" ? "#F8F9F7" : "#1A1E21");
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <a class="skip" href="#content">Skip to content</a>
+  <header class="nav">
+    <div class="shell nav-bar">
+      <a class="wordmark" href="index.html"><span class="mark" aria-hidden="true">P</span><span><strong>Padfield</strong><small>RPEQ 38942</small></span></a>
+      <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="siteNav">Menu</button>
+      <nav id="siteNav" aria-label="Pages">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="delivery.html">Delivery</a>
+        <a href="practice.html">Practice</a>
+        <a href="enquire.html" aria-current="page">Enquire</a>
+      </nav>
+      <div class="nav-tools">
+        <button type="button" class="theme-toggle" id="themeToggle">Light</button>
+        <a class="nav-cta" href="enquire.html" aria-current="page">Enquire</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="content">
+    <div class="shell enquire-layout">
+      <div class="enquire-intro">
+        <p class="eyebrow">Enquire</p>
+        <h1>Send a message.</h1>
+        <p class="lede">Say which service you need and the package. If it is a fit, you get a direct reply.</p>
+        <p><a class="contact-line" href="tel:+61426281117">0426 281 117</a></p>
+        <p><a class="contact-line" id="emailLink" href="mailto:padfieldepiphany@gmail.com">padfieldepiphany@gmail.com</a></p>
+        <p class="lede">Queensland. Site work through the state, and New South Wales where the package is.</p>
+        <figure class="frame">
+          <img src="assets/grader.jpg" alt="Motor grader trimming a formation" width="1800" height="1200">
+          <figcaption>Grader. Indicative.</figcaption>
+        </figure>
+      </div>
+      <div class="form-card">
+        <form id="enquiry" novalidate>
+          <label class="hp">Company website <input type="text" name="website" tabindex="-1" autocomplete="off"></label>
+          <label class="field">Name
+            <input name="name" type="text" autocomplete="name" required>
+          </label>
+          <label class="field">Organisation
+            <input name="organisation" type="text" autocomplete="organization">
+          </label>
+          <div class="split">
+            <label class="field">Email
+              <input name="email" type="email" autocomplete="email" required>
+            </label>
+            <label class="field">Phone
+              <input name="phone" type="tel" autocomplete="tel">
+            </label>
+          </div>
+          <label class="field">Service
+            <select name="service" required>
+              <option value="">Choose a service</option>
+              <option>Road project management</option>
+              <option>Civil construction engineering</option>
+              <option>Bridge works</option>
+              <option>Marine and waterway civils</option>
+              <option>Pre-contracts</option>
+              <option>Quality and auditing</option>
+              <option>Project controls</option>
+              <option>Project delivery</option>
+              <option>Not sure yet</option>
+            </select>
+          </label>
+          <label class="field">Message
+            <textarea name="message" rows="5" required placeholder="Package, location, timing."></textarea>
+          </label>
+          <button class="btn" type="submit">Send message</button>
+          <p class="form-status" id="formStatus" role="status"></p>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <footer class="foot">
+    <div class="shell foot-cta">
+      <div>
+        <p class="eyebrow">Direct</p>
+        <h2>Prefer the phone? Call it.</h2>
+      </div>
+      <div class="foot-cta-actions">
+        <a class="btn" href="tel:+61426281117">0426 281 117</a>
+        <a class="btn btn-ghost" href="mailto:padfieldepiphany@gmail.com">Email</a>
+      </div>
+    </div>
+    <div class="shell foot-grid">
+      <div>
+        <a class="wordmark" href="index.html"><span class="mark" aria-hidden="true">P</span><span><strong>Padfield</strong><small>RPEQ 38942</small></span></a>
+        <p class="foot-role">Director, Senior Engineer<br>Civil and road project management</p>
+      </div>
+      <nav aria-label="Footer">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="delivery.html">Delivery</a>
+        <a href="practice.html">Practice</a>
+        <a href="enquire.html">Enquire</a>
+      </nav>
+      <div class="foot-contact">
+        <a href="tel:+61426281117">0426 281 117</a>
+        <a href="mailto:padfieldepiphany@gmail.com">padfieldepiphany@gmail.com</a>
+        <p class="fine">Queensland · New South Wales</p>
+      </div>
+    </div>
+    <div class="shell foot-base">
+      <p>© 2026 Epiphany Padfield</p>
+      <p class="fine">Photographs via Pexels. Road formation photograph by JFVelasquez Floro, CC0, via Wikimedia Commons. Plant shown is indicative, not a record of a particular contract.</p>
+    </div>
+  </footer>
+  <script src="main.js"></script>
+</body>
+</html>
